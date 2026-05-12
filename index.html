@@ -163,7 +163,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.6rem, 6vw, 5.2rem);
+            font-size: clamp(2.2rem, 4.5vw, 5.2rem);
             font-weight: 900;
             line-height: 1.0;
             letter-spacing: -0.02em;
@@ -743,6 +743,19 @@
         }
 
         /* === RESPONSIVE === */
+        @media (max-width: 1280px) {
+            .hero { padding: 120px 40px 80px; }
+            .hero-inner { padding-left: 0; }
+            .hero-media-box { width: 420px; min-width: 420px; }
+            .hero-layout { gap: 40px; }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-layout { flex-direction: column; gap: 40px; }
+            .hero-media-box { width: 100% !important; min-width: unset !important; aspect-ratio: 16/9; }
+            section { padding: 80px 40px; }
+        }
+
         @media (max-width: 768px) {
             nav { padding: 16px 24px; }
             section { padding: 72px 24px; }
