@@ -242,7 +242,6 @@
 
         .client-logo:hover { opacity: 0.8; }
 
-
         .hero-cta-row {
             display: flex;
             align-items: center;
@@ -439,6 +438,37 @@
             text-transform: uppercase;
             margin-top: 4px;
             width: fit-content;
+        }
+
+        /* === TESTIMONIALS === */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 28px 24px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: #333;
+            margin: 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 640px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* === FOR WHO === */
@@ -768,20 +798,11 @@
                 <img src="logos/PVt0jXoPLuEXGHVL2HTkvUZ7s.png" alt="Client logo" class="client-logo">
                 <img src="logos/qQa6Dj8eLOhFPLB43JlVoM2BN4M.png" alt="Client logo" class="client-logo">
                 <img src="logos/SrMnmMtDYub5hNPd15BSZMmXI.png" alt="Client logo" class="client-logo">
-                <img src="logos/0xyMzWTNcQY9cGzaHiOFCqfFfY.png" alt="Client logo" class="client-logo">
-                <img src="logos/ASek0hJp7QwfGlFNiLi1gZatM.png" alt="Client logo" class="client-logo">
-                <img src="logos/aWYTCtS0Xu9ooThd5h9rZ4CcbWg.png" alt="Client logo" class="client-logo">
             </div>
         </div>
     </div>
     <div class="hero-media-box">
-        <img class="hero-slide active" src="slide1.jpg" alt="AI visuele content">
-        <img class="hero-slide" src="slide2.jpg" alt="AI visuele content">
-        <img class="hero-slide" src="slide3.jpg" alt="AI visuele content">
-        <img class="hero-slide" src="slide4.jpeg" alt="AI visuele content">
-        <img class="hero-slide" src="slide5.jpeg" alt="AI visuele content">
-        <img class="hero-slide" src="slide6.jpeg" alt="AI visuele content">
-        <video class="hero-slide" src="slide7.webm" muted playsinline loop></video>
+        <img src="hero.png" alt="Van schets naar render met AI" style="width:100%;height:100%;object-fit:cover;">
     </div>
     </div>
 </section>
@@ -867,23 +888,23 @@
         <div class="program-list">
             <div class="program-item">
                 <div class="program-content">
-                    <div class="program-name">Waarom AI-video nu al jouw marketing verandert</div>
-                    <div class="program-desc">Context, framing en de laatste ontwikkelingen in AI-video — en wat dit nu al betekent voor marketeers die voorop willen lopen.</div>
+                    <div class="program-name">Waarom AI-video de toekomst van marketing is</div>
+                    <div class="program-desc">We laten zien hoe snel de ontwikkelingen gaan in AI-video — en waarom merken die nu beginnen een blijvende voorsprong opbouwen.</div>
                 </div>
             </div>
 
             <div class="program-item">
                 <div class="program-content">
-                    <div class="program-name">Goede prompts schrijven — voor tekst én beeld</div>
-                    <div class="program-desc">Live demo van hoe je prompts structureert voor precieze AI-instructies, zowel voor tekst als voor visuele media.</div>
+                    <div class="program-name">Goede prompts schrijven voor beeld &amp; video</div>
+                    <div class="program-desc">We leren jullie prompten volgens de nieuwste en meest effectieve methode, zodat je direct betere resultaten haalt uit elke tool.</div>
                     <div class="program-badge">Live demo</div>
                 </div>
             </div>
 
             <div class="program-item">
                 <div class="program-content">
-                    <div class="program-name">Live demo: AI-foto's met JSON-prompts</div>
-                    <div class="program-desc">Gestructureerde JSON-prompts voor onderwerp, omgeving, belichting en cameracontrole — live gedemonstreerd.</div>
+                    <div class="program-name">AI-foto's maken met JSON-prompts</div>
+                    <div class="program-desc">Maak professionele productfoto's en campagnebeelden live — inclusief hoe je merkstijl consistent houdt over alle visuals.</div>
                     <div class="program-badge">Live demo</div>
                 </div>
             </div>
@@ -891,38 +912,66 @@
             <div class="program-item">
                 <div class="program-content">
                     <div class="program-name">Pauze</div>
-                    <div class="program-desc">Koffiepauze en ruimte voor vragen.</div>
+                    <div class="program-desc">Korte pauze. Ruimte voor vragen en eerste indrukken.</div>
                 </div>
             </div>
 
             <div class="program-item">
                 <div class="program-content">
-                    <div class="program-name">Higgsfield in de praktijk — Canvas Mode &amp; nodes</div>
-                    <div class="program-desc">Diepgaande uitleg van Canvas Mode, node-koppeling en workflow-opbouw — van referentieafbeelding tot video-output.</div>
+                    <div class="program-name">Higgsfield Canvas Mode</div>
+                    <div class="program-desc">De kern van de training: leer hoe je met Higgsfield professionele video's genereert — van concept tot eindresultaat in minuten.</div>
                     <div class="program-badge">Highlight</div>
                 </div>
             </div>
 
             <div class="program-item">
                 <div class="program-content">
-                    <div class="program-name">Character consistency &amp; merkidentiteit</div>
-                    <div class="program-desc">Hoe genereer je meerdere clips met consistente personages — en hoe bewaar je de visuele merkidentiteit door alle content heen.</div>
+                    <div class="program-name">Character consistency &amp; UGC-content</div>
+                    <div class="program-desc">Hoe zorg je dat je AI-personages herkenbaar blijven over meerdere video's? En hoe maak je UGC-achtige content die authentiek aanvoelt.</div>
                     <div class="program-badge">Nieuw</div>
                 </div>
             </div>
 
             <div class="program-item">
                 <div class="program-content">
-                    <div class="program-name">De beste AI-tools voor marketeers nu</div>
-                    <div class="program-desc">Overzicht van de meest bruikbare AI-tools van dit moment — gefilterd op wat écht werkt voor marketingprofessionals.</div>
+                    <div class="program-name">Beste AI-tools voor marketing nu</div>
+                    <div class="program-desc">We bespreken de meest relevante tools van dit moment — gefilterd op wat écht werkt voor marketeers en contentteams.</div>
                 </div>
             </div>
 
             <div class="program-item">
                 <div class="program-content">
-                    <div class="program-name">Q&amp;A en next steps</div>
-                    <div class="program-desc">Afsluiting met een open vragenronde en concrete handvatten om morgen al aan de slag te gaan.</div>
+                    <div class="program-name">Q&amp;A</div>
+                    <div class="program-desc">We sluiten af met een open vragenronde. Stel alles wat je wilt weten — onze trainers geven eerlijke, praktische antwoorden.</div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="light" id="testimonials">
+    <div class="inner">
+        <div class="section-label">Wat deelnemers zeggen</div>
+        <h2 class="section-title">Ervaringen uit de praktijk.</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Het was top jongens! Goed gedaan. Jullie hebben ons aan het werk gezet."</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Interactief, energiek en leerzaam. De AI-proeverij gaf ons niet alleen kennis, maar ook zin om er zelf mee aan de slag te gaan."</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Bedankt voor de toegankelijke, maar ook zeker praktische kennis. Wij kunnen verder met de volgende stap!"</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"De studiedag was mede dankzij jullie, heel geslaagd! Dank Luca en Gianluca voor jullie inspirerende verhaal."</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Compact, helder en precies wat we nodig hadden. We kunnen meteen doorpakken."</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"De AI-proeverij van Leonardo Consultancy was een geweldige kennismaking met AI. Duidelijk, toegankelijk en stap voor stap uitgelegd. Wij hebben er veel van geleerd en zijn gemotiveerd om verder te gaan!"</p>
             </div>
         </div>
     </div>
@@ -1244,7 +1293,7 @@
         btn.disabled = true;
         btn.textContent = 'Versturen…';
 
-        const WEBHOOK_URL = 'https://hook.eu2.make.com/wjeqcvxjcsh9defuh53g4i2uka3q0mt0';
+        const WEBHOOK_URL = 'https://hook.eu2.make.com/4rgfndrqf3qjtpbrzkzq2qhs7gz6hees';
 
         try {
             await fetch(WEBHOOK_URL, {
