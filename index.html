@@ -1164,30 +1164,22 @@
         const feedback = document.getElementById('form-feedback');
         const btn = form.querySelector('button[type="submit"]');
 
+        const datums = Array.from(form.querySelectorAll('input[name="datum"]:checked')).map(cb => cb.value);
+
         const data = {
             voornaam:  form.voornaam.value,
             achternaam: form.achternaam.value,
             email:     form.email.value,
             telefoon:  form.telefoon.value,
             bedrijf:   form.bedrijf.value,
+            datum:     datums.join(', '),
             opmerking: form.opmerking.value
         };
 
         btn.disabled = true;
         btn.textContent = 'Versturen…';
 
-        const WEBHOOK_URL = ''; // ← vul hier de webhook URL in
-
-        if (!WEBHOOK_URL) {
-            feedback.style.display = 'block';
-            feedback.style.background = 'rgba(9,254,233,0.1)';
-            feedback.style.border = '1px solid rgba(9,254,233,0.3)';
-            feedback.style.color = 'var(--cyan)';
-            feedback.textContent = '✓ Formulier werkt — koppel nog een webhook URL om verzending te activeren.';
-            btn.disabled = false;
-            btn.textContent = 'Aanmelden voor de training →';
-            return;
-        }
+        const WEBHOOK_URL = 'https://hook.eu2.make.com/4rgfndrqf3qjtpbrzkzq2qhs7gz6hees';
 
         try {
             await fetch(WEBHOOK_URL, {
