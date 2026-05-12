@@ -440,6 +440,37 @@
             width: fit-content;
         }
 
+        /* === TESTIMONIALS === */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 28px 24px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: #333;
+            margin: 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 640px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* === FOR WHO === */
         .who-grid {
             display: grid;
@@ -913,6 +944,34 @@
                     <div class="program-name">Q&amp;A</div>
                     <div class="program-desc">We sluiten af met een open vragenronde. Stel alles wat je wilt weten — onze trainers geven eerlijke, praktische antwoorden.</div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="light" id="testimonials">
+    <div class="inner">
+        <div class="section-label">Wat deelnemers zeggen</div>
+        <h2 class="section-title">Ervaringen uit de praktijk.</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Het was top jongens! Goed gedaan. Jullie hebben ons aan het werk gezet."</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Interactief, energiek en leerzaam. De AI-proeverij gaf ons niet alleen kennis, maar ook zin om er zelf mee aan de slag te gaan."</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Bedankt voor de toegankelijke, maar ook zeker praktische kennis. Wij kunnen verder met de volgende stap!"</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"De studiedag was mede dankzij jullie, heel geslaagd! Dank Luca en Gianluca voor jullie inspirerende verhaal."</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Compact, helder en precies wat we nodig hadden. We kunnen meteen doorpakken."</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"De AI-proeverij van Leonardo Consultancy was een geweldige kennismaking met AI. Duidelijk, toegankelijk en stap voor stap uitgelegd. Wij hebben er veel van geleerd en zijn gemotiveerd om verder te gaan!"</p>
             </div>
         </div>
     </div>
